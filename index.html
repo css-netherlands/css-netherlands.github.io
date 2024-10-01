@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Greece</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+            color: navy;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            border: 2px solid navy;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: navy;
+            color: white;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #003366;
+        }
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #ccc;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Records</h2>
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
+
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>30-ITEMS</th>
+            <th>10-ITEMS</th>
+            <th>PARTIAL GRADE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="NAME">ACERON, GERALD CANILLO</td>
+            <td data-label="30-ITEMS">20</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">73</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">CAMEROS, REIMON NIKOLAI GONZALES</td>
+            <td data-label="30-ITEMS">0</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">63</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">COMPE, REX BASA</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">DALION, MARJONE ETORMA</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">92</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">DE LOS REYES, JIANE KYLE BUENAFE</td>
+            <td data-label="30-ITEMS">28</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">94</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">EJOS, GIO FELICILDA</td>
+            <td data-label="30-ITEMS">30</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">76</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">GARDOCE, ROY</td>
+            <td data-label="30-ITEMS">25</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">LARONG, NOVARIZO BAYO</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">92</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">LORA, JAY CLARENCE ANDIG</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">LOGRONIO, KHEYAN LOU</td>
+            <td data-label="30-ITEMS">15</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">73</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">MABASLE, JHON PAUL DAVE EGOM</td>
+            <td data-label="30-ITEMS">0</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">63</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">MARQUEZ, JUSTIN DALE</td>
+            <td data-label="30-ITEMS">0</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">63</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">PALMENCO, KAMES CARL ROBLE</td>
+            <td data-label="30-ITEMS">30</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">95</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">PASCUA, FRANK JUSTINE POLINGA</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">ROMAO, JOMAR</td>
+            <td data-label="30-ITEMS">25</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">SARA, JOSHUA APORADOR</td>
+            <td data-label="30-ITEMS">30</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">76</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">TACDER, MIELLE KIRBY BUENAFE</td>
+            <td data-label="30-ITEMS">18</td>
+            <td data-label="10-ITEMS">4</td>
+            <td data-label="PARTIAL GRADE">72</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">VISITACION, JAY TIEMPO</td>
+            <td data-label="30-ITEMS">28</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">94</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">ACSIBAR, ROMELYN CAPUNO</td>
+            <td data-label="30-ITEMS">28</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">94</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">BERDIGUEL, CASHLEA JESSAN FELIZARTA</td>
+            <td data-label="30-ITEMS">15</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">73</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">FERNANDEZ, DANICA DE LA TORRE</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">92</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">GARCIA, ALLIAH EDISA BAGAYAS</td>
+            <td data-label="30-ITEMS">0</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">63</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">GENERALAO, MARIELLE SUPANGAN</td>
+            <td data-label="30-ITEMS">23</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">92</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">LOGRONIO, NINA CLAIRE SABSAL</td>
+            <td data-label="30-ITEMS">0</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">63</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">MAGDUA, CHARMEL REVIDAD</td>
+            <td data-label="30-ITEMS">20</td>
+            <td data-label="10-ITEMS">10</td>
+            <td data-label="PARTIAL GRADE">90</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">NUÑEZ, STEFANIE PEREZ</td>
+            <td data-label="30-ITEMS">5</td>
+            <td data-label="10-ITEMS">4</td>
+            <td data-label="PARTIAL GRADE">69</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">PASIA, LYNSIE ANDA</td>
+            <td data-label="30-ITEMS">10</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">72</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">SORDILLA, HANNA MAE CELLON</td>
+            <td data-label="30-ITEMS">10</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">72</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">TAMAYO, MARIANNE BOLIGOR</td>
+            <td data-label="30-ITEMS">25</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">74</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">ZAMBO, SHERIEN PADAYOGDOG</td>
+            <td data-label="30-ITEMS">20</td>
+            <td data-label="10-ITEMS">5</td>
+            <td data-label="PARTIAL GRADE">73</td>
+        </tr>
+        <tr>
+            <td data-label="NAME">ROLLARATA, PRINCESS SARAH</td>
+            <td data-label="30-ITEMS">8</td>
+            <td data-label="10-ITEMS">0</td>
+            <td data-label="PARTIAL GRADE">64</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("studentTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Search by name
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
